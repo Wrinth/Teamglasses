@@ -17,7 +17,7 @@
 
         function Login(email, password, callback) {
 
-            $http.get('./ezshiyou-api/api.php/user/?filter[]=email,eq,'+email+'&filter[]=password,eq,'+password+'&satisfy=all&transform=1')
+            $http.get('./teamglasses-api/api.php/user/?filter[]=email,eq,'+email+'&filter[]=password,eq,'+password+'&satisfy=all&transform=1')
                 .then(function (response) {
                     callback(response);
                 });
