@@ -46,6 +46,11 @@ function config($routeProvider, $locationProvider) {
             templateUrl: 'views/shoppingcart.html',
             controllerAs: 'shoppingcart'
         })
+        .when('/profile', {
+            controller: 'UserCtrl',
+            templateUrl: 'views/profile.html',
+            controllerAs: 'user'
+        })
         .when('/nofound', {
             templateUrl: '404.html'
         })
