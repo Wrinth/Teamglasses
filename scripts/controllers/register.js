@@ -13,6 +13,7 @@
 
         function register() {
             controller.dataLoading = true;
+            console.log(controller.user);
             UserService.Create(controller.user)
                 .then(function (response) {
                     if (response != null) {

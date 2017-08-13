@@ -13,7 +13,8 @@ angular
     'ngAnimate',
     'ngAria',
     'ngCookies',
-    'ngRoute'
+    'ngRoute',
+    'ngFileUpload'
   ])
   .config(config)
   .run(run);
@@ -26,10 +27,10 @@ function config($routeProvider, $locationProvider) {
             controller: 'MainCtrl',
             controllerAs: 'main'
         })
-        .when('/about', {
-            templateUrl: 'views/about.html',
-            controller: 'AboutCtrl',
-            controllerAs: 'about'
+        .when('/shoppingcart', {
+            templateUrl: 'views/shoppingcart.html',
+            controller: 'ShoppingCartCtrl',
+            controllerAs: 'shoppingcart'
         })
         .when('/login', {
             controller: 'LoginCtrl',
@@ -40,6 +41,11 @@ function config($routeProvider, $locationProvider) {
             controller: 'RegisterCtrl',
             templateUrl: 'views/register.html',
             controllerAs: 'register'
+        })
+        .when('/user', {
+          controller: 'UserCtrl',
+          templateUrl: 'views/user.html',
+          controllerAs: 'user'
         })
         .when('/nofound', {
             templateUrl: '404.html'
